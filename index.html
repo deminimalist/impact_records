@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    
+    <!-- ************************ STANDARD HEAD *************************** -->
+    <meta charset="UTF-8">
+        
+
+    <!-- This makes the page more mobile friendly. This tells the web browswer how to render the page. This line is effectively saying: make the content render at the width of the device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- This is the label for the browswer tab -->
+    <title>IMPACT RECORDS</title>
+
+    <!-- This link is for a subfolder hence the ./foldername/location -->
+    <!-- To jump back a level, use two dots at the beginning -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- This link is for an icon         -->
+    <!-- Note that to jump back a folder level, use two dots at the beginning -->   
+    <link rel="icon" href="./images/favicon-16x16.png" type="image/x-icon" >
+    
+    
+        <!-- ************************* MEDIA QUERIES ***************************** -->
+            
+        <!-- Style formatting is usually in the CSS file. The point of media queries is to apply a change to formatting when the media query detects a reason to make a change.
+            
+        The first media query below has a default background colour for a small screen (width <320px). This would normally be defined in the CSS but is ok here for this example. The HTML uses media queries to change the background colour as the screen size exceeds defined boundaries (page 60)
+    
+        Media queries can also test for width, height, device width and height, device aspect ratio, various colour specs parameters, resolution, scanning etc (page 62-65).
+    
+        Consider them a basic conditional logic which modifies a baseline formatting. The baseline formatting should be set before the media queries are created. 
+        -->
+
+        <style>
+            body {
+                background-color: rgb(226, 222, 222);
+                }
+                @media screen and (min-width: 150px) {
+                body {
+                    background-color: rgb(177, 180, 177);
+                }
+                }
+                @media screen and (min-width: 550px) {
+                body {
+                    background-color: rgb(235, 235, 124);
+                }
+                }
+                @media screen and (min-width: 768px) {
+                body {
+                    background-color: rgb(218, 192, 145);
+                }
+                }
+                @media screen and (min-width: 960px) {
+                body {
+                    background-color: rgb(245, 180, 180);
+                }
+            }
+    
+            /* Following section of book from page 66
+            This enables the nav to slide up beside the logo image. 
+            Also note the .masthead{} class formatting on the CSS sheet */
+            /* @media (min-width: 1000px) {
+                .masthead {
+                    flex-direction: row;
+                    justify-content: space-between;
+                    max-width: 100%;
+                    margin: 0 auto;
+                }
+            } */
+    
+            /* On the CSS sheet, there is formatting for the class .nav_section. This margin and padding properties we at the default viewport size. This @media section overwrites the .class formatting if the screen exceeds 800px width. In this case, the margin and padding are reset to 0 
+            When the nav links are below the logo image there is a gap, when the screen extends so the links are on the top right of the screen, the gap above the links is 0.
+            Page 90-92 - modified to make nav menu stack vertically when page is extended, via flex box properties.
+            */
+            /* @media (min-width: 960px) {
+                .nav_section {
+                    margin-top: 25;
+                    padding: 25;
+                    flex-direction: column;
+                    align-items: center;
+                }
+            } */
+    
+            @media (min-width: 200px) {
+                .last_nav_link {
+                    margin-right: 1rem;
+                }
+            }       
+    
+            @media (min-width: 800px) {
+                .paragraph_text {
+                    font-size: 3em;
+                }
+            }
+    
+            /* The hover media feature tests the devices ability to hover over elements on the screen 
+            I haven't figured this out yet*/
+            @media (any-hover: coarse) {
+                .paragraph_text{
+                    font-weight: bold;
+                }
+            }
+    
+            /* Prefers-color-scheme for adding a dark mode or light mode (page 74) */
+            /* @media (prefers-color-scheme: dark) {
+                body {
+                    background-color: #333;
+                    color: #ddd
+                }
+            }  */
+    
+    
+        </style>
+    </head>
+
+<!--******************************************************************************************************************************************************************************************************-->
+
+<body id = wrap>
+
+    <header class = "main_header_container">
+
+        <h1 id = "impact_records">IMPACT RECORDS</h1>
+
+        <nav id = "main_nav">
+            <!-- consider adding an unordered list -->
+            <a class = "nav_item" href="#music">MUSIC</a>
+            <a class = "nav_item" href="#events">EVENTS</a>
+            <a class = "nav_item" href="#reviews">REVIEWS</a>
+            <a class = "cart" href="#cart">CART</a>
+        </nav>
+
+    </header>
+   
+<!--******************************************************************************************************************************************************************************************************-->
+    
+    <header class = section_header_container> ALBUM OF THE WEEK </header>
+
+    
+    <section class = section_panel_album_of_week>
+    <!-- <section id = album_of_the_week> -->
+        <!-- section needs a background image -->
+        
+        <img 
+            src="./images/alessandro_cortini_volume_massimo_1024.jpg" 
+            class = intro_img 
+            alt="Alessandro Cortini's Volume Massimo album cover"
+        >
+        <div class = intro_box>
+            
+            <p>Alessandro Cortini - Volume Massimo</p>
+            <p>This is a brief introduction to this review. If you click anywhere, it will bring you to the full review page. 
+            </p>
+        </div>
+
+
+    </section>
+
+
+
+<!--******************************************************************************************************************************************************************************************************-->
+    
+    <header class = section_header_container> NEW RELEASES </header>
+    
+    <section class = section_panel_new_releases>
+        <!-- This is the outer grid -->
+        <!-- <section id = new_releases> -->
+        <!-- section needs a background image -->
+                
+        <div class = new_release_grid_1> 
+            <img 
+                src="./images/monolake_ghosts_1200.jpg" 
+                class = intro_img 
+                alt="Album cover of Ghosts, by Monolake"
+            >
+            <div class = intro_box>
+                <p>The Latest Releases</p>
+                <p>This is an intro to the New Releases page. If you click anywhere, it will bring you to a list of music to listen and buy. 
+                </p>
+            </div>
+        </div>
+
+        <div class = new_release_grid_2> 
+            <img 
+            src="./images/alessandro_cortini_volume_massimo_1024.jpg" 
+            class = intro_img 
+            alt="Alessandro Cortini's Volume Massimo album cover"
+        >
+        <div class = intro_box>
+            <p>Alessandro Cortini - Volume Massimo</p>
+            <p>This is a brief introduction to this review. If you click anywhere, it will bring you to the full review page. 
+            </p>
+        </div>
+        </div>
+
+        <div class = new_release_grid_3> 
+            <img 
+                src="./images/monolake_ghosts_1200.jpg" 
+                class = intro_img 
+                alt="Album cover of Ghosts, by Monolake"
+            >
+            <div class = intro_box>
+                <p>The Latest Releases</p>
+                <p>This is an intro to the New Releases page. If you click anywhere, it will bring you to a list of music to listen and buy. 
+                </p>
+            </div>
+        </div>
+
+        <div class = new_release_grid_4> 
+            <img 
+            src="./images/alessandro_cortini_volume_massimo_1024.jpg" 
+            class = intro_img 
+            alt="Alessandro Cortini's Volume Massimo album cover"
+        >
+        <div class = intro_box>
+            
+            <p>Alessandro Cortini - Volume Massimo</p>
+            <p>This is a brief introduction to this review. If you click anywhere, it will bring you to the full review page. 
+            </p>
+        </div>
+        </div>
+
+        <div class = new_release_grid_5> 
+            <img 
+                src="./images/monolake_ghosts_1200.jpg" 
+                class = intro_img 
+                alt="Album cover of Ghosts, by Monolake"
+            >
+            <div class = intro_box>
+                <p>The Latest Releases</p>
+                <p>This is an intro to the New Releases page. If you click anywhere, it will bring you to a list of music to listen and buy. 
+                </p>
+            </div>
+        </div>
+
+        <div class = new_release_grid_6> 
+            <img 
+            src="./images/alessandro_cortini_volume_massimo_1024.jpg" 
+            class = intro_img 
+            alt="Alessandro Cortini's Volume Massimo album cover"
+        >
+        <div class = intro_box>
+            
+            <p>Alessandro Cortini - Volume Massimo</p>
+            <p>This is a brief introduction to this review. If you click anywhere, it will bring you to the full review page. 
+            </p>
+        </div>
+        </div>
+
+        <div class = new_release_grid_7> 
+            <img 
+                src="./images/monolake_ghosts_1200.jpg" 
+                class = intro_img 
+                alt="Album cover of Ghosts, by Monolake"
+            >
+            <div class = intro_box>
+                <p>The Latest Releases</p>
+                <p>This is an intro to the New Releases page. If you click anywhere, it will bring you to a list of music to listen and buy. 
+                </p>
+            </div>
+        </div>
+
+        <div class = new_release_grid_8> 
+            <img 
+            src="./images/alessandro_cortini_volume_massimo_1024.jpg" 
+            class = intro_img 
+            alt="Alessandro Cortini's Volume Massimo album cover"
+            >
+        <div class = intro_box>
+            
+            <p>Alessandro Cortini - Volume Massimo</p>
+            <p>This is a brief introduction to this review. If you click anywhere, it will bring you to the full review page. 
+            </p>
+        </div>
+        </div>
+
+
+    </section>
+
+
+
+
+<!--******************************************************************************************************************************************************************************************************-->
+    
+    <header class = section_header_container> UPCOMING EVENTS </header>
+
+    <section class = section_panel_events>
+        <img 
+            src="./images/festival_large_pexels-sebastian-ervi-1763067.jpg" 
+            class = intro_img 
+            alt="Night-time crowd at a festival by Sebastian Evri, from Pexels.com"
+        >
+        <!-- <div class = intro_box>
+            <p>PARTY TIME!!!</p>
+            <p>This is an intro to the events page. If you click anywhere, it will bring you to a list of events. This is an intro to the events page. 
+            </p>
+        </div> -->
+    </section>
+
+<!--******************************************************************************************************************************************************************************************************-->
+
+    <footer class = footer>
+        <div id = copyright> &copy; GC 2023 </div>    
+        <div id = contact> CONTACT US</div>
+    </footer>
+
+
+<!--******************************************************************************************************************************************************************************************************-->
+
+</body>
+</html>
